@@ -118,3 +118,11 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .estado.poco i { background: var(--acento); }
 .estado.nada { color: var(--error); }
 .estado.nada i { background: var(--error); }
+
+/* ---------- vista contacto ---------- */
+.contacto { margin-top: var(--e-md); }
+.contacto .boton { align-self: flex-start; }
+
+/* ---------- vista contacto ---------- */
+.contacto { margin-top: var(--e-md); }
+.contacto .boton { align-self: flex-start; }
