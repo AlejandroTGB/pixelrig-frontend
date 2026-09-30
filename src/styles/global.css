@@ -126,3 +126,13 @@ button, input, textarea, select { font: inherit; color: inherit; }
 /* ---------- vista contacto ---------- */
 .contacto { margin-top: var(--e-md); }
 .contacto .boton { align-self: flex-start; }
+
+/* ---------- vista admin ---------- */
+.admin { display: grid; grid-template-columns: 380px 1fr; gap: var(--e-md); margin-top: var(--e-md); align-items: start; }
+.admin .formulario { max-width: none; padding: var(--e-md); }
+.admin-titulo { font-family: var(--fuente-titulo); font-size: var(--t-menor); color: var(--texto-fuerte); letter-spacing: 1px; margin-bottom: var(--e-xs); }
+.admin-acciones { display: flex; gap: var(--e-xs); }
+.tabla { width: 100%; border-collapse: collapse; font-size: var(--t-base); }
+.tabla th { font-family: var(--fuente-titulo); font-size: var(--t-micro); letter-spacing: 1px; color: var(--texto-suave); text-align: left; padding: 10px var(--e-sm); border-bottom: var(--grosor-borde) solid var(--borde); }
+.tabla td { padding: 10px var(--e-sm); border-bottom: var(--grosor-borde) solid var(--borde-tenue); }
+.tabla .acciones { display: flex; gap: 6px; justify-content: flex-end; }
