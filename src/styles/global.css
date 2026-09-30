@@ -73,3 +73,11 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .mensaje.error { color: var(--error); }
 .mensaje.exito { color: var(--exito); }
 .cargando { color: var(--texto-suave); font-size: var(--t-base); }
+
+/* ---------- vista login ---------- */
+.login { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: var(--e-lg); }
+.login .panel { width: 100%; max-width: 440px; padding: var(--e-lg) var(--e-lg) var(--e-md); }
+.login .titulo { text-align: center; }
+.login .subtitulo { text-align: center; margin-bottom: var(--e-md); }
+.login .formulario { max-width: none; margin-top: var(--e-lg); }
+.login .boton { width: 100%; }
