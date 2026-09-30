@@ -38,6 +38,17 @@
   --almacenamiento: #E0524F;
   --fuente:         #DA84F6;
 
+  /* --- Resplandores (neón): el mismo color del tema, con transparencia --- */
+  --glow-acento: color-mix(in srgb, var(--acento) 45%, transparent);
+  --glow-accion: color-mix(in srgb, var(--accion) 45%, transparent);
+  --glow-error:  color-mix(in srgb, var(--error)  35%, transparent);
+
+  /* --- Halos del formulario de acceso: estado normal y estado de fallo --- */
+  --ok-panel:    color-mix(in srgb, var(--acento) 9%, var(--panel));
+  --ok-halo:     color-mix(in srgb, var(--acento) 14%, var(--fondo));
+  --fallo-panel: color-mix(in srgb, var(--error) 10%, var(--panel));
+  --fallo-halo:  color-mix(in srgb, var(--error) 16%, var(--fondo));
+
   /* --- Tipografía --- */
   --fuente-titulo: 'Press Start 2P', monospace;  /* logo, títulos, botones y etiquetas */
   --fuente-texto:  'Work Sans', sans-serif;      /* párrafos, descripciones y datos */
