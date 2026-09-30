@@ -31,7 +31,8 @@ export function AuthProvider({ children }) {
     return {
       username: claims.username,
       grupos: claims['cognito:groups'] ?? [],
-      token: sesion...ng()
+      token: sesion.tokens.accessToken.toString()
+
     }
   }
 
