@@ -1,0 +1,75 @@
+@import './tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  font-size: var(--t-base);
+}
+
+h1, h2, h3, p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button, input, textarea, select { font: inherit; color: inherit; }
+
+/* ---------- barra superior ---------- */
+.navbar {
+  display: flex; align-items: center; gap: 30px;
+  height: var(--alto-navbar); padding: 0 var(--e-lg);
+  background: var(--superficie);
+  border-bottom: var(--grosor-borde) solid var(--borde);
+}
+.navbar .logo { font-family: var(--fuente-titulo); font-size: var(--t-medio); color: var(--texto-fuerte); letter-spacing: 2px; }
+.navbar .logo span { color: var(--acento); }
+.navbar a.enlace { font-family: var(--fuente-titulo); font-size: var(--t-chico); color: var(--texto-suave); letter-spacing: 1px; }
+.navbar a.enlace:hover, .navbar a.enlace.activo { color: var(--texto-fuerte); }
+.navbar .derecha { margin-left: auto; display: flex; align-items: center; gap: var(--e-md); }
+.rol { font-family: var(--fuente-titulo); font-size: var(--t-micro); color: var(--acento); border: var(--grosor-borde) solid var(--acento); padding: 6px 9px; letter-spacing: 1px; }
+.correo { font-size: var(--t-base); color: var(--texto-suave); }
+
+/* ---------- botones ---------- */
+.boton {
+  font-family: var(--fuente-titulo); font-size: var(--t-chico); letter-spacing: 1px;
+  padding: 10px 15px; border: 0; cursor: pointer;
+  background: var(--accion); color: var(--tinta);
+}
+.boton:hover { filter: brightness(1.15); }
+.boton:disabled { opacity: .5; cursor: not-allowed; }
+.boton.secundario { background: transparent; color: var(--texto-suave); border: var(--grosor-borde) solid var(--borde); }
+.boton.peligro { background: var(--error); color: var(--texto-fuerte); }
+
+/* ---------- estructura de vista ---------- */
+.vista { padding: var(--e-lg); }
+.titulo { font-family: var(--fuente-titulo); font-size: var(--t-titulo); color: var(--texto-fuerte); line-height: 1.5; margin-bottom: var(--e-sm); }
+.subtitulo { color: var(--texto-suave); font-size: var(--t-medio); }
+.barra-seccion {
+  display: flex; align-items: center; gap: var(--e-md);
+  padding: var(--e-lg) var(--e-lg) var(--e-sm);
+  border-top: var(--grosor-borde) solid var(--separador);
+}
+.barra-seccion h2 { font-family: var(--fuente-titulo); font-size: var(--t-menor); color: var(--texto-fuerte); letter-spacing: 1px; }
+.barra-seccion .resumen { font-size: var(--t-base); color: var(--texto-suave); }
+
+/* ---------- paneles ---------- */
+.panel { background: var(--panel); border: var(--grosor-borde) solid var(--borde); padding: var(--e-md); }
+
+/* ---------- formularios ---------- */
+.formulario { display: flex; flex-direction: column; gap: var(--e-md); width: 100%; max-width: 420px; }
+.campo { display: flex; flex-direction: column; gap: 6px; }
+.campo label { font-family: var(--fuente-titulo); font-size: var(--t-micro); color: var(--texto-suave); letter-spacing: 1px; }
+.campo input, .campo textarea, .campo select {
+  background: var(--fondo-hondo); border: var(--grosor-borde) solid var(--borde);
+  color: var(--texto); padding: 10px 12px;
+}
+.campo input:focus, .campo textarea:focus, .campo select:focus { outline: none; border-color: var(--acento); }
+.campo textarea { min-height: 110px; resize: vertical; }
+
+/* ---------- mensajes ---------- */
+.mensaje { font-size: var(--t-base); }
+.mensaje.error { color: var(--error); }
+.mensaje.exito { color: var(--exito); }
+.cargando { color: var(--texto-suave); font-size: var(--t-base); }
