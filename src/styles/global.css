@@ -81,3 +81,40 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .login .subtitulo { text-align: center; margin-bottom: var(--e-md); }
 .login .formulario { max-width: none; margin-top: var(--e-lg); }
 .login .boton { width: 100%; }
+
+/* ---------- vista productos ---------- */
+.hero { padding: var(--e-lg) var(--e-lg) var(--e-md); }
+.diagrama { position: relative; width: 100%; max-width: var(--ancho-contenido); aspect-ratio: 1000 / 700; margin: 0 auto var(--e-md); }
+.diagrama svg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; }
+.diagrama .pc { position: absolute; left: 23.5%; top: 10%; width: 53%; height: 78.86%; z-index: 1; }
+.diagrama .pc img { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+.cat {
+  position: absolute; z-index: 3; width: 20%; height: 7.7%; padding: 0 var(--e-sm);
+  background: var(--panel); border: var(--grosor-borde) solid var(--borde);
+  display: flex; flex-direction: column; justify-content: center; gap: 5px;
+  cursor: pointer; text-align: left;
+}
+.cat:hover, .cat.activo { border-color: var(--c); }
+.cat .nom { font-family: var(--fuente-titulo); font-size: var(--t-chico); color: var(--texto-fuerte); letter-spacing: 1px; display: flex; align-items: center; gap: 8px; }
+.cat .nom i { width: 9px; height: 9px; background: var(--c); display: block; flex: none; }
+.cat .desc { font-size: var(--t-menor); color: var(--texto-suave); }
+.grid { padding: 0 var(--e-lg) var(--e-xl); display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--e-md); }
+.card { background: var(--panel); border: var(--grosor-borde) solid var(--borde); padding: var(--e-md); display: flex; flex-direction: column; min-height: 230px; }
+.card .thumb {
+  height: 92px; background: var(--fondo); border: var(--grosor-borde) solid var(--borde-tenue);
+  display: flex; align-items: center; justify-content: center; margin-bottom: var(--e-sm);
+  font-family: var(--fuente-titulo); font-size: var(--t-micro); color: var(--texto-tenue);
+}
+.card .chip { font-family: var(--fuente-titulo); font-size: var(--t-micro); letter-spacing: 1px; color: var(--c); display: flex; align-items: center; gap: 7px; margin-bottom: 10px; }
+.card .chip i { width: 8px; height: 8px; background: var(--c); display: block; }
+.card h3 { margin: 0 0 auto; font-size: var(--t-medio); font-weight: 600; color: var(--texto-fuerte); line-height: 1.35; }
+.card .pie { margin-top: var(--e-sm); display: flex; flex-direction: column; gap: var(--e-xs); border-top: var(--grosor-borde) solid var(--borde-tenue); padding-top: var(--e-sm); }
+.card .precio { color: var(--acento); font-weight: 600; font-size: var(--t-grande); }
+.card .estado { font-size: var(--t-menor); display: flex; align-items: center; gap: 7px; }
+.card .estado i { width: 8px; height: 8px; display: block; }
+.estado.ok { color: var(--exito); }
+.estado.ok i { background: var(--exito); }
+.estado.poco { color: var(--acento); }
+.estado.poco i { background: var(--acento); }
+.estado.nada { color: var(--error); }
+.estado.nada i { background: var(--error); }
