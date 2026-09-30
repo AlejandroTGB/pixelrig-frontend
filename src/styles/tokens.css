@@ -1,0 +1,65 @@
+/* ============================================================
+   PixelRig — tokens de diseño
+   Único lugar donde se definen colores, tipografías, tamaños y
+   espaciados. Los demás archivos CSS consumen estas variables
+   (var(--nombre)); nunca escriben un color suelto.
+   ============================================================ */
+
+:root {
+
+  /* --- Superficies, de más oscura a más clara --- */
+  --fondo:          #14161f;  /* fondo de la página */
+  --superficie:     #171a26;  /* navbar y barras de sección */
+  --panel:          #1c1f2b;  /* tarjetas, cajas de categoría, formularios */
+  --fondo-hondo:    #0b0d14;  /* relleno de miniaturas y zonas hundidas */
+  --tinta:          #0d0f16;  /* texto oscuro sobre botones de color */
+
+  /* --- Bordes --- */
+  --borde:          #333a4d;  /* borde principal de paneles y tarjetas */
+  --borde-tenue:    #2a3042;  /* separadores internos (pie de tarjeta, miniatura) */
+  --separador:      #22232c;  /* línea entre secciones */
+
+  /* --- Texto, de más fuerte a más tenue --- */
+  --texto-fuerte:   #ffffff;  /* títulos y nombre de producto */
+  --texto:          #dfd3b9;  /* texto corriente */
+  --texto-suave:    #8b93a7;  /* descripciones y datos secundarios */
+  --texto-tenue:    #3f4860;  /* texto deshabilitado y marcadores de posición */
+
+  /* --- Colores con significado --- */
+  --acento:         #ffd23f;  /* precio, rol del usuario, elemento activo */
+  --accion:         #4a8fe0;  /* botones de acción: entrar, guardar, salir */
+  --exito:          #8beb46;  /* stock disponible */
+  --error:          #fd2b2b;  /* sin stock y errores de formulario */
+
+  /* --- Categorías de componentes (color de la pieza en el diagrama) --- */
+  --cpu:            #1682E3;
+  --ram:            #FEFC6C;
+  --gpu:            #87F77C;
+  --almacenamiento: #E0524F;
+  --fuente:         #DA84F6;
+
+  /* --- Tipografía --- */
+  --fuente-titulo: 'Press Start 2P', monospace;  /* logo, títulos, botones y etiquetas */
+  --fuente-texto:  'Work Sans', sans-serif;      /* párrafos, descripciones y datos */
+
+  --t-micro:   8px;   /* etiqueta de estado, chip de categoría, rol */
+  --t-chico:   9px;   /* enlaces del navbar y botones */
+  --t-menor:  12px;   /* descripciones y textos de apoyo */
+  --t-base:   13px;   /* texto corriente */
+  --t-medio:  15px;   /* nombre del producto en la tarjeta */
+  --t-grande: 17px;   /* precio */
+  --t-titulo: 19px;   /* título de la vista */
+
+  /* --- Espaciado --- */
+  --e-xs:  8px;
+  --e-sm: 14px;
+  --e-md: 18px;
+  --e-lg: 32px;   /* margen lateral de las secciones */
+  --e-xl: 64px;   /* alto del navbar y cierre inferior de la página */
+
+  /* --- Estructura --- */
+  --alto-navbar:     64px;
+  --ancho-contenido: 1000px;  /* ancho de la zona central y del diagrama */
+  --grosor-borde:    1px;
+  --radio:           0;       /* el estilo pixel art no usa esquinas redondeadas */
+}
