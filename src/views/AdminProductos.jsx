@@ -16,6 +16,7 @@ export default function AdminProductos() {
   const [enviando, setEnviando] = useState(false)
   const [aviso, setAviso] = useState('')
   const [error, setError] = useState('')
+  const [avisos, setAvisos] = useState({})
 
   async function cargar() {
     try {
@@ -48,11 +49,13 @@ export default function AdminProductos() {
     })
     setAviso('')
     setError('')
+    setAvisos({})
   }
 
   function cancelar() {
     setEditando(null)
     setFormulario(VACIO)
+    setAvisos({})
   }
 
   async function guardar(evento) {
@@ -106,12 +109,19 @@ export default function AdminProductos() {
       <p className="subtitulo">Crea, edita y elimina componentes del catálogo.</p>
 
       <div className="admin">
-        <form className="formulario panel" onSubmit={guardar}>
+        <form className="formulario panel" onSubmit={guardar} noValidate>
           <h2 className="admin-titulo">{editando ? `EDITANDO #${editando}` : 'NUEVO PRODUCTO'}</h2>
 
-          <div className="campo">
+          <div className={avisos.nombre ? 'campo con-error' : 'campo'}>
             <label htmlFor="nombre">NOMBRE</label>
-            <input id="nombre" value={formulario.nombre} onChange={(evento) => cambiar('nombre', evento.target.value)} required />
+            <input
+              id="nombre"
+              value={formulario.nombre}
+              onChange={(evento) => cambiar('nombre', evento.target.value)}
+              aria-invalid={Boolean(avisos.nombre)}
+              aria-describedby={avisos.nombre ? 'aviso-nombre-p' : undefined}
+            />
+            {avisos.nombre && <p className="aviso" id="aviso-nombre-p">{avisos.nombre}</p>}
           </div>
 
           <div className="campo">

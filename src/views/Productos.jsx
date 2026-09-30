@@ -62,8 +62,8 @@ export default function Productos() {
   return (
     <>
       <section className="hero">
-        <h1 className="titulo">ARMA TU RIG PIEZA POR PIEZA</h1>
-        <p className="subtitulo">Catálogo de componentes con stock real. Filtra por tipo de pieza haciendo clic en el diagrama.</p>
+        <h1 className="titulo">ARMA TU RIG</h1>
+        <p className="subtitulo">Catálogo de componentes con stock real. Filtra haciendo clic en una pieza del diagrama.</p>
       </section>
 
       <div className="diagrama">
@@ -109,11 +109,12 @@ export default function Productos() {
             const estado = estadoDelStock(producto.stock)
             return (
               <article className="card" key={producto.id}>
-                <div className="thumb">SIN IMAGEN</div>
                 <div className="chip" style={{ '--c': COLORES[producto.categoria] ?? 'var(--texto-suave)' }}>
                   <i></i>{producto.categoria}
                 </div>
                 <h3>{producto.nombre}</h3>
+                <p className="marca-prod">{producto.marca}</p>
+                <p className="desc">{producto.descripcion}</p>
                 <div className="pie">
                   <span className="precio">{precioCLP(producto.precio)}</span>
                   <span className={`estado ${estado.tipo}`}><i></i>{estado.texto}</span>
@@ -121,7 +122,9 @@ export default function Productos() {
               </article>
             )
           })}
-          {visibles.length === 0 && <p className="cargando">No hay componentes en esta categoría.</p>}
+          {visibles.length === 0 && (
+            <p className="estado-vacio">No hay componentes en esta categoría. Prueba con otra pieza del diagrama.</p>
+          )}
         </div>
       )}
     </>
